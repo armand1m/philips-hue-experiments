@@ -20,11 +20,11 @@ In order to make calls to Philips Bridge, you need to authenticate your device.
 
 I implemented a simple script for this, you can run it using `npm run register-user`, and it will print a key after it is complete.
 
-Keep in mind you need to press the button in Philips Bridge before running this command in order for it to work (you'll have an error message if you forget to do this).
+Keep in mind you need to press the button in Philips Bridge before running this command in order for it to work _(you'll have an error message telling you to do so, if you forget to do this)_.
 
-After this, get the key for the registered user, and store it in your `.bashrc`, `.zshrc`, ou simply `export` it as `PHILIPS_HUE_USERNAME`.
+After this, get the key for the registered user, and store it in your `.bashrc`, `.zshrc`, or simply `export` it as `PHILIPS_HUE_USERNAME=<user-token>`.
 
-At this point, you're ready to run any commands you might want to! :) 
+At this point, you're ready to run any commands you might want to! :)
 
 ## Commands
 
