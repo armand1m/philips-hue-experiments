@@ -33,8 +33,7 @@ Currently, we have these commands available:
  - `npm run info`
     - Prints information about the commands implemented.
 
-
- - `npm run register`
+ - `npm run register-user`
     - Register an user in your Philips Bridge and prints it so you can use it to run other commands.
 
  - `npm run turn-on`
