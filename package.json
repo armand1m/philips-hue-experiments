@@ -1,0 +1,40 @@
+{
+  "name": "philips-hue-experiments",
+  "version": "1.0.0",
+  "description": "Some experiments around Node Hue Api for Philips HUE",
+  "main": "index.js",
+  "scripts": {
+    "info": "npm-scripts-info",
+    "register-user": "node ./commands/register-user.js",
+    "turn-on": "node ./commands/turn-on.js",
+    "turn-off": "node ./commands/turn-off.js",
+    "start-colors-loop": "node ./commands/start-colors-loop.js",
+    "stop-effects": "node ./commands/stop-effects.js",
+    "set-brightness": "node ./commands/set-brightness.js",
+    "set-saturation": "node ./commands/set-saturation.js",
+    "set-color-temperature": "node ./commands/set-color-temperature.js"
+  },
+  "scripts-info": {
+    "register-user": "Register an user in your Philips Bridge and prints it so you can use it to run other commands.",
+    "turn-on": "Turns on all lamps",
+    "turn-off": "Turns off all lamps",
+    "start-colors-loop": "Start a colors loop with all lamps",
+    "stop-effects": "Stop all effects in all lamps",
+    "set-brightness": "Set brightness for all lamps, accepts a first argument as a brightness percentage (min: 0, max: 100)",
+    "set-saturation": "Set saturation for all lamps, accepts a first argument as a saturation percentage (min: 0, max: 100)",
+    "set-color-temperature": "Set color temperature  for all lamps, accepts a first argument as a color temperature value (min: 153, max: 500)"
+  },
+  "keywords": [
+    "hue",
+    "philips",
+    "bulbs",
+    "smart-bulbs",
+    "api"
+  ],
+  "author": "Armando Magalhães",
+  "license": "ISC",
+  "dependencies": {
+    "node-hue-api": "^2.4.4",
+    "npm-scripts-info": "^0.3.9"
+  }
+}
