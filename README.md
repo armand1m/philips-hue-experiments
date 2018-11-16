@@ -4,6 +4,8 @@ Well, I recently bought a Google Home Mini + 3 Philips Hue bulbs in a kit, and s
 
 This is a simple project in nodejs which explores the `node-hue-api` module and implements some features as commands you can run from CLI.
 
+![Usage](https://github.com/armand1m/philips-hue-experiments/blob/master/.github/usage.gif?raw)
+
 ## Getting started
 
  - Clone this repo locally.
@@ -22,6 +24,12 @@ I implemented a simple script for this, you can run it using `npm run register-u
 
 Keep in mind you need to press the button in Philips Bridge before running this command in order for it to work _(you'll have an error message telling you to do so, if you forget to do this)_.
 
+- Without pressing Bridge button:
+    ![register failing](https://github.com/armand1m/philips-hue-experiments/blob/master/.github/npm-run-register-user.gif?raw)
+
+- After pressing Bridge button:
+    ![register success](https://github.com/armand1m/philips-hue-experiments/blob/master/.github/npm-run-register-success.gif?raw)
+
 After this, get the key for the registered user, and store it in your `.bashrc`, `.zshrc`, or simply `export` it as `PHILIPS_HUE_USERNAME=<user-token>`.
 
 At this point, you're ready to run any commands you might want to! :)
@@ -32,6 +40,7 @@ Currently, we have these commands available:
 
  - `npm run info`
     - Prints information about the commands implemented.
+    - ![info](https://github.com/armand1m/philips-hue-experiments/blob/master/.github/npm-run-info.gif?raw)
 
  - `npm run register-user`
     - Register an user in your Philips Bridge and prints it so you can use it to run other commands.
