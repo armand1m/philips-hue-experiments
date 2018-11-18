@@ -57,6 +57,9 @@ Currently, we have these commands available:
  - `npm run stop-effects`
     - Stop all effects in all lamps
 
+ - `npm run set-color -- "#ff0000"`
+    - Set color for all lamps, accepts a first argument as the color wished. Accepts CSS names, HEX, RGB, RGBA and HSL.
+ 
  - `npm run set-brightness -- 40`
     - Set brightness for all lamps, accepts a first argument as a brightness percentage (min: 0, max: 100)
 
