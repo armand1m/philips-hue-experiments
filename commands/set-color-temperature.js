@@ -2,7 +2,7 @@ const { lightState } = require("node-hue-api");
 const withLogging = require("../lib/with-logging");
 const applyLightStateToAll = require("../lib/apply-light-state-to-all");
 
-const colorTemperatureLevel = process.argv[2];
+const colorTemperatureLevel = Number(process.argv[2]);
 
 if (!colorTemperatureLevel) {
   throw new Error("ColorTemperature level argument is missing. Make sure you ran it like: `npm run set-color-temperature -- 170`");

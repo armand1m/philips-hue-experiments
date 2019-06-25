@@ -2,7 +2,7 @@ const { lightState } = require("node-hue-api");
 const withLogging = require("../lib/with-logging");
 const applyLightStateToAll = require("../lib/apply-light-state-to-all");
 
-const brightnessLevel = process.argv[2];
+const brightnessLevel = Number(process.argv[2]);
 
 if (!brightnessLevel) {
   throw new Error("Brightness level argument is missing. Make sure you ran it like: `npm run set-brightness -- 70`");

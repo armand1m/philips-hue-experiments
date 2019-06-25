@@ -37,7 +37,7 @@
   "license": "ISC",
   "dependencies": {
     "color-to-name": "^1.0.15",
-    "node-hue-api": "^2.4.4",
+    "node-hue-api": "2.4.6",
     "npm-scripts-info": "^0.3.9",
     "onecolor": "^3.1.0"
   }

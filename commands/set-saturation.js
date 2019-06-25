@@ -2,7 +2,7 @@ const { lightState } = require("node-hue-api");
 const withLogging = require("../lib/with-logging");
 const applyLightStateToAll = require("../lib/apply-light-state-to-all");
 
-const saturationLevel = process.argv[2];
+const saturationLevel = Number(process.argv[2]);
 
 if (!saturationLevel) {
   throw new Error("Saturation level argument is missing. Make sure you ran it like: `npm run set-saturation -- 50`");

@@ -19,9 +19,9 @@ if (!recognizedColor) {
 }
 
 const colorAsHex = recognizedColor.hex();
-const colorAsRgb = recognizedColor.toJSON().slice(1, -1);
+const [red, green, blue] = recognizedColor.toJSON().slice(1, -1);
 const colorName = colorToName.findClosestColor(colorAsHex).name;
 
 const applyState = withLogging(`set color to '${colorName} (${colorAsHex})'`)(applyLightStateToAll);
 
-applyState(lightState.create().rgb(colorAsRgb));
+applyState(lightState.create().rgb(red, green, blue));
