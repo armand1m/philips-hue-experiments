@@ -13,12 +13,14 @@
     "set-color": "node ./commands/set-color.js",
     "set-brightness": "node ./commands/set-brightness.js",
     "set-saturation": "node ./commands/set-saturation.js",
-    "set-color-temperature": "node ./commands/set-color-temperature.js"
+    "set-color-temperature": "node ./commands/set-color-temperature.js",
+    "list-lamps": "node ./commands/list-lamps.js"
   },
   "scripts-info": {
     "register-user": "Register an user in your Philips Bridge and prints it so you can use it to run other commands.",
-    "turn-on": "Turns on all lamps",
-    "turn-off": "Turns off all lamps",
+    "list-lamps": "Lists all reachable lamps.",
+    "turn-on": "Turns one lamp or more.",
+    "turn-off": "Turns off one lamp or more.",
     "start-colors-loop": "Start a colors loop with all lamps",
     "stop-effects": "Stop all effects in all lamps",
     "set-color": "Set color for all lamps, accepts a first argument as the accepts a first argument as the color wished. Accepts CSS names, HEX, RGB, RGBA and HSL.",
@@ -36,7 +38,9 @@
   "author": "Armando Magalhães",
   "license": "ISC",
   "dependencies": {
+    "cli-table": "^0.3.1",
     "color-to-name": "^1.0.15",
+    "command-line-args": "^5.1.1",
     "node-hue-api": "2.4.6",
     "npm-scripts-info": "^0.3.9",
     "onecolor": "^3.1.0"
