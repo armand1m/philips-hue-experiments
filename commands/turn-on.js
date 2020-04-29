@@ -16,17 +16,21 @@ const options = commandLineArgs(optionDefinitions)
 
 const state = lightState.create().on();
 
-if (options.all) {
-  applyStateToAll(state);
-  process.exit(0);
+const run = async () => {
+  if (options.all) {
+    await applyStateToAll(state);
+    process.exit(0);
+  }
+  
+  if (!options.id) {
+    console.log("Provide one id at least or run with the --all flag.");
+    process.exit(0);
+  }
+  
+  options.id.forEach(id => {
+    const applyState = withLogging(`turn light with id ${id} on`)(applyLightState)
+    applyState(id, state)
+  })
 }
 
-if (!options.id) {
-  console.log("Provide one id at least or run with the --all flag.");
-  process.exit(0);
-}
-
-options.id.forEach(id => {
-  const applyState = withLogging(`turn light with id ${id} on`)(applyLightState)
-  applyState(id, state)
-})
+run();
